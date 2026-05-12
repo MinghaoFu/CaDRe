@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "CaDRe: Learning General Causal Structures with Hidden Dynamic Process for Climate Analysis"
+authors:
+  - family-names: Fu
+    given-names: Minghao
+    affiliation: "Mohamed bin Zayed University of Artificial Intelligence; Carnegie Mellon University"
+  - family-names: Huang
+    given-names: Biwei
+    affiliation: "University of California San Diego"
+  - family-names: Li
+    given-names: Zijian
+    affiliation: "Mohamed bin Zayed University of Artificial Intelligence; Carnegie Mellon University"
+  - family-names: Zheng
+    given-names: Yujia
+    affiliation: "Carnegie Mellon University"
+  - family-names: Ng
+    given-names: Ignavier
+    affiliation: "Carnegie Mellon University"
+  - family-names: Chen
+    given-names: Guangyi
+    affiliation: "Mohamed bin Zayed University of Artificial Intelligence; Carnegie Mellon University"
+  - family-names: Hu
+    given-names: Yingyao
+    affiliation: "Johns Hopkins University"
+  - family-names: Zhang
+    given-names: Kun
+    affiliation: "Mohamed bin Zayed University of Artificial Intelligence; Carnegie Mellon University"
+repository-code: "https://github.com/MinghaoFu/CaDRe"
+url: "https://openreview.net/forum?id=MZxhwFT7yF"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Learning General Causal Structures with Hidden Dynamic Process for Climate Analysis"
+  authors:
+    - family-names: Fu
+      given-names: Minghao
+    - family-names: Huang
+      given-names: Biwei
+    - family-names: Li
+      given-names: Zijian
+    - family-names: Zheng
+      given-names: Yujia
+    - family-names: Ng
+      given-names: Ignavier
+    - family-names: Chen
+      given-names: Guangyi
+    - family-names: Hu
+      given-names: Yingyao
+    - family-names: Zhang
+      given-names: Kun
+  collection-title: "Proceedings of the 43rd International Conference on Machine Learning"
+  year: 2026
+  url: "https://openreview.net/forum?id=MZxhwFT7yF"
