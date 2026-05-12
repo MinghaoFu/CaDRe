@@ -2,7 +2,7 @@ import torch
 import random
 import argparse
 import numpy as np
-import ipdb as pdb
+import pdb
 import os, pwd, yaml
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader, random_split
@@ -21,10 +21,10 @@ from pytorch_lightning.loggers import WandbLogger
 from Caulimate.Utils.Tools import lin_reg_init, check_array, check_tensor
 from Caulimate import CESM2
 
-SST_DATA_PATH = "/l/users/minghao.fu/CESM2/CESM2_pacific_SST.pkl"
-SPACE_INDEX_DATA_PATH = "/l/users/minghao.fu/CESM2/CESM2_pacific.pkl"
-GROUP_DATA_DIR = "/l/users/minghao.fu/dataset/CESM2/group_region/"
-XR_DATA_PATH = "/l/users/minghao.fu/dataset/CESM2/CESM2_pacific_grouped_SST.nc"
+SST_DATA_PATH = "${DATA_DIR}/CESM2/CESM2_pacific_SST.pkl"
+SPACE_INDEX_DATA_PATH = "${DATA_DIR}/CESM2/CESM2_pacific.pkl"
+GROUP_DATA_DIR = "${DATA_DIR}/CESM2/group_region/"
+XR_DATA_PATH = "${DATA_DIR}/CESM2/CESM2_pacific_grouped_SST.nc"
 
 def main(args):
     

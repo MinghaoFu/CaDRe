@@ -17,8 +17,7 @@ from .metrics.correlation import compute_mcc
 from Caulimate.Utils.Tools import check_array, check_tensor
 from Caulimate.Utils.Lego import PartiallyPeriodicMLP
 
-import ipdb as pdb
-
+import pdb
 class ModularShiftsFixedB(pl.LightningModule):
     def __init__(
         self, 

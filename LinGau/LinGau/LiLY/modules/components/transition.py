@@ -5,9 +5,7 @@ from torch.autograd.functional import jacobian
 from torch.func import jacfwd, vmap
 from .mlp import NLayerLeakyMLP, NLayerLeakyNAC
 from .base import GroupLinearLayer
-import ipdb as pdb
-
-
+import pdb
 # class MBDTransitionPrior(nn.Module):
 
 #     def __init__(self, lags, latent_size, bias=False):

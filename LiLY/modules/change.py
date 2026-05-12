@@ -12,8 +12,7 @@ from .components.transition import (MBDTransitionPrior,
 from .components.mlp import MLPEncoder, MLPDecoder, Inference
 from .metrics.correlation import compute_mcc
 
-import ipdb as pdb
-
+import pdb
 class TimeVaryingProcess(pl.LightningModule):
 
     def __init__(

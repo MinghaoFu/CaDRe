@@ -11,7 +11,7 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
-import ipdb
+import pdb
 import pytorch_lightning as fpl
 import wandb
 from pytorch_lightning.loggers import WandbLogger
@@ -47,7 +47,7 @@ SAVE_DIR = os.path.join(MODEL_DIR, 'ClimateModel/LinGau/CESM2')
 makedir(SAVE_DIR)
 save_test_dir = './downscale_CESM2_eud_mask'
 
-CKPT_PATH="/fsx/homes/Minghao.Fu@mbzuai.ac.ae/workspace/climate-project/SSM/climate/5nikihdb/checkpoints/epoch=1044-step=98230.ckpt"
+CKPT_PATH="${PROJECT_ROOT}/workspace/climate-project/SSM/climate/5nikihdb/checkpoints/epoch=1044-step=98230.ckpt"
 
 # if torch.cuda.is_available():   
 #     os.environ["CUDA_VISIBLE_DEVICES"] = get_free_gpu()
@@ -73,7 +73,7 @@ def randomly_zero_elements(adj_matrix, mask, keep=True, zero_fraction=0.05, one_
     return adj_matrix, set_zero_indices.tolist(), set_one_indices.tolist()
 
 args = {
-    'data_path': "/l/users/minghao.fu/dataset/CESM2/CESM2_pacific_grouped_SST.nc",
+    'data_path': "${DATA_DIR}/CESM2/CESM2_pacific_grouped_SST.nc",
     'noise_type': 'gaussian_ev',
     'load_data': True,
     'graph_type': 'ER',
@@ -113,7 +113,7 @@ args = {
     'tol': 0.0,
     'graph_thres': 0.3,
     'DAG': 0.8,
-    'save_dir': "/l/users/minghao.fu/logs/ClimateModel/LinGau/CESM2",
+    'save_dir': "${LOG_DIR}/ClimateModel/LinGau/CESM2",
 
     'condition': "ignavier",
     'decay_type': "step",

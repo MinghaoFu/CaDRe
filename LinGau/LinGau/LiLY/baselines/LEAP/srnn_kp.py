@@ -16,8 +16,7 @@ from LiLY.modules.components.transition import (MBDTransitionPrior, NPTransition
 
 from LiLY.modules.keypointer import Keypointer
 
-import ipdb as pdb
-
+import pdb
 class SRNNKeypointNS(pl.LightningModule):
 
     def __init__(

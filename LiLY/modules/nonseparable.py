@@ -20,8 +20,7 @@ from PIL import Image
 from Caulimate.Utils.Tools import check_tensor, bin_mat
 from Caulimate.Utils.Lego import PartiallyPeriodicMLP
 import wandb
-import ipdb as pdb
-
+import pdb
 def plot_sparsity_matrix(alphas, title):
     mat_a = torch.tensor(alphas).numpy()
     mat_a_values = np.round(mat_a, decimals=2)

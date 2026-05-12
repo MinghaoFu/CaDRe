@@ -2,8 +2,8 @@
 # Model Configurations  #
 #########################
 
-ROOT: '/home/minghao.fu/workspace/lily/LiLY/data'
-LOG: '/home/minghao.fu/workspace/lily/log'
+ROOT: '${PROJECT_ROOT}/LiLY/data'
+LOG: '${PROJECT_ROOT}/log'
 DATASET: 'vary_B_modular_4_9_9'
 CHECKPOINT: './fixedB_best_model.ckpt'
 LOAD_CHECKPOINT: False

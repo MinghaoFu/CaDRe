@@ -2,7 +2,7 @@ import torch
 import random
 import argparse
 import numpy as np
-import ipdb as pdb
+import pdb
 import os, pwd, yaml
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader, random_split
@@ -43,10 +43,10 @@ makedir(SAVE_DIR)
 
 config = {
     "GRAPH_THRES": 0.01,
-    "CHECKPOINT": "/home/minghao.fu/workspace/icml2024/scripts/climate/80m7ag95/checkpoints/epoch=443-step=41736.ckpt",
+    "CHECKPOINT": "${PROJECT_ROOT}/scripts/climate/80m7ag95/checkpoints/epoch=443-step=41736.ckpt",
     "DATASET": "seed_69_fixed_B_modular_4_2_6",
     "LOAD_CHECKPOINT": False,
-    "LOG": "/home/minghao.fu/workspace/icml2024/log",
+    "LOG": "${PROJECT_ROOT}/log",
     "LOG_NAME": "diag",
     "MAX_EUD": 40,
     "REG_THRES": 0.12,
@@ -60,7 +60,7 @@ config = {
     },
 
     "PROJ_NAME": "climate",
-    "ROOT": "/home/minghao.fu/workspace/icml2024/LiLY/data",
+    "ROOT": "${PROJECT_ROOT}/LiLY/data",
     "SPLINE": {
         "BINS": 8,
         "BOUND": 5,

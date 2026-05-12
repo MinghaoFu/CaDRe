@@ -4,9 +4,7 @@ import pytorch_lightning as pl
 from torch.nn import functional as F
 from .components.keypoint import KeyPointNet
 
-import ipdb as pdb
-
-
+import pdb
 class Keypointer(pl.LightningModule):
 
     def __init__(self, 

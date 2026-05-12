@@ -12,8 +12,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 import torch.nn.functional as F
-import ipdb as pdb
-
+import pdb
 class SpatialSoftmax(torch.nn.Module):
     def __init__(self, height, width, channel, lim=[-1., 1., -1., 1.], temperature=None, data_format='NCHW'):
         super(SpatialSoftmax, self).__init__()

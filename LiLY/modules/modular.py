@@ -12,8 +12,7 @@ from .components.mlp import MLPEncoder, MLPDecoder, Inference
 from .components.flow import ComponentWiseCondSpline
 from .metrics.correlation import compute_mcc
 from Caulimate.Utils.Tools import check_tensor
-import ipdb as pdb
-
+import pdb
 class ModularShifts(pl.LightningModule):
 
     def __init__(

@@ -11,7 +11,7 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
-import ipdb
+import pdb
 import pytorch_lightning as fpl
 import wandb
 from pytorch_lightning.loggers import WandbLogger
@@ -31,11 +31,11 @@ from Caulimate.Utils.GraphMetric import count_graph_accuracy
 from Caulimate.Data.CESM2.dataset import CESM2_grouped_dataset, downscale_dataset
 from Caulimate.Utils.GraphUtils import eudistance_mask
 
-DATA_DIR = '/l/users/minghao.fu/minghao.fu/dataset/CESM2' # you could modify it to your path
+DATA_DIR = '${DATA_DIR}/dataset/CESM2' # you could modify it to your path
 DOWNSCALE_PATH = os.path.join(DATA_DIR, 'downscaled_pacific_CESM2.txt')
 DOWNSCALE_METADATA_PATH = os.path.join(DATA_DIR, 'downscaled_metadata.pkl')
 
-SAVE_DIR = '/l/users/minghao.fu/minghao.fu/dataset/ClimateModel/LinGau/CESM2' # model and logs save dir
+SAVE_DIR = '${DATA_DIR}/dataset/ClimateModel/LinGau/CESM2' # model and logs save dir
 makedir(SAVE_DIR)
 
 if torch.cuda.is_available():   
@@ -44,7 +44,7 @@ if torch.cuda.is_available():
 
 
 args = {
-    'data_path': "/l/users/minghao.fu/minghao.fu/dataset/CESM2/CESM2_pacific_grouped_SST.nc",
+    'data_path': "${DATA_DIR}/dataset/CESM2/CESM2_pacific_grouped_SST.nc",
     'noise_type': 'gaussian_ev',
     'load_data': True,
     'graph_type': 'ER',
@@ -84,7 +84,7 @@ args = {
     'tol': 0.0,
     'graph_thres': 0.3,
     'DAG': 0.8,
-    'save_dir': "/l/users/minghao.fu/minghao.fu/logs/ClimateModel/LinGau/CESM2",
+    'save_dir': "${DATA_DIR}/logs/ClimateModel/LinGau/CESM2",
 
     'condition': "ignavier",
     'decay_type': "step",

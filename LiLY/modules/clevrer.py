@@ -15,8 +15,7 @@ from .components.flow import ComponentWiseCondSpline
 from .metrics.correlation import compute_mcc
 from .components.SAVI import build_SAVI
 from torch.autograd import Variable
-import ipdb as pdb
-
+import pdb
 class Slot2Z_dist(nn.Module):
     def __init__(self, hidden_dim,num_slots=7,  # at most 6 objects per scene
         slot_size=128,):

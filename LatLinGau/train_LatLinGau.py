@@ -23,6 +23,6 @@ def main(args):
 
 if __name__ == "__main__":
 
-    args = load_yaml('/home/minghao.fu/workspace/climate/LiLY/configs/LatLinGau.yaml')
+    args = load_yaml('${PROJECT_ROOT}/LiLY/configs/LatLinGau.yaml')
 
     main(args)

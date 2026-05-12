@@ -4,8 +4,7 @@ import torch
 import random
 import numpy as np
 from torch.utils.data import Dataset
-import ipdb as pdb
-
+import pdb
 class StationaryDataset(Dataset):
     
     def __init__(self, directory, transition="noisecoupled_gaussian_ts_2lag"):

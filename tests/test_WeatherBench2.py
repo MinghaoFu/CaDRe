@@ -30,11 +30,11 @@ from Caulimate.CESM2 import dataset
 from Caulimate.metrics.correlation import correlation, align_two_latents, align_different_latents
 from Caulimate.stat import whiten_data
 
-SST_DATA_PATH = "/l/users/minghao.fu/CESM2/CESM2_pacific_SST.pkl"
-SPACE_INDEX_DATA_PATH = "/l/users/minghao.fu/CESM2/CESM2_pacific.pkl"
-GROUP_DATA_DIR = "/l/users/minghao.fu/dataset/CESM2/group_region/"
-XR_DATA_PATH = "/l/users/minghao.fu/dataset/CESM2/CESM2_pacific_grouped_SST.nc"
-CKP_PATH = "/home/minghao.fu/workspace/climate/scripts/climate/f7cciuvm/checkpoints/epoch=145-step=13724.ckpt"
+SST_DATA_PATH = "${DATA_DIR}/CESM2/CESM2_pacific_SST.pkl"
+SPACE_INDEX_DATA_PATH = "${DATA_DIR}/CESM2/CESM2_pacific.pkl"
+GROUP_DATA_DIR = "${DATA_DIR}/CESM2/group_region/"
+XR_DATA_PATH = "${DATA_DIR}/CESM2/CESM2_pacific_grouped_SST.nc"
+CKP_PATH = "${PROJECT_ROOT}/scripts/climate/f7cciuvm/checkpoints/epoch=145-step=13724.ckpt"
 TEST_SIZE = 100
 RESULTS_SAVE_DIR = ''
 DAG_THRES = 0.1
@@ -174,7 +174,7 @@ for z_idx in range(CESM2_treatment_effects.shape[1]):
     # save z_i treatment effects
     xr_te_lst.append(xr_te_i)
 
-te_save_path=f"/l/users/minghao.fu/dataset/CESM2/CESM2_treatment_effects.nc"
+te_save_path=f"${DATA_DIR}/CESM2/CESM2_treatment_effects.nc"
 xr_te = xr.concat(xr_te_lst, dim='zs')
 xr_te.to_netcdf(te_save_path)
 

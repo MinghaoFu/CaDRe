@@ -21,8 +21,7 @@ from Caulimate.Utils.Tools import check_array, check_tensor
 from Caulimate.Utils.Lego import PartiallyPeriodicMLP
 from einops import repeat
 
-import ipdb as pdb
-
+import pdb
 class CESM2ModularShiftsFixedB(pl.LightningModule):
     def __init__(
             self,

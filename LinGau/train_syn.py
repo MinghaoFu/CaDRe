@@ -9,7 +9,7 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
-import ipdb
+import pdb
 import pytorch_lightning as fpl
 import wandb
 from pytorch_lightning.loggers import WandbLogger

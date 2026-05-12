@@ -17,7 +17,7 @@ import gym_cartpole_world
 # from dqn.ddqn import DoubleDQNAgent
 from xvfbwrapper import Xvfb
 import cv2
-import ipdb as pdb
+import pdb
 # from keras import backend as K
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '-1'

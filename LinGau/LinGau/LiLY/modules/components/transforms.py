@@ -14,7 +14,7 @@ from . import utils
 from .base import (GroupLinearLayer,
                    FlowSequential)
 import copy
-import ipdb as pdb
+import pdb
 # Invertible Component-wise Spline Transformation #
 class ComponentWiseSpline(components.Transform):
     def __init__(

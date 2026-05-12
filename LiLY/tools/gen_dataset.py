@@ -4,7 +4,7 @@ import tqdm
 import torch
 import scipy
 import random
-import ipdb as pdb
+import pdb
 import numpy as np
 from torch import nn
 from torch.nn import init

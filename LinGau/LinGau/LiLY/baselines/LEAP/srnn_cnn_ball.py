@@ -15,8 +15,7 @@ from LiLY.modules.components.tc import Discriminator, permute_dims
 from LiLY.modules.metrics.correlation import compute_mcc
 from LiLY.modules.components.transforms import ComponentWiseSpline
 
-import ipdb as pdb
-
+import pdb
 class SRNNConv(pl.LightningModule):
 
     def __init__(

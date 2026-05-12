@@ -13,8 +13,7 @@ from ..metrics.correlation import compute_mcc
 "FactorVAE list"
 from .net import FactorVAEMLP, FactorVAECNN, FactorVAEKP, Discriminator
 from .ops import recon_loss, kl_divergence, permute_dims
-import ipdb as pdb
-
+import pdb
 class FactorVAE(pl.LightningModule):
     def __init__(self, 
                  input_dim, 

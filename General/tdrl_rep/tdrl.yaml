@@ -2,10 +2,10 @@
 # Model Configurations  #
 #########################
 
-ROOT: '/home/minghao.fu/workspace/lily/LiLY/data'
-LOG: '/home/minghao.fu/workspace/lily/log'
+ROOT: '${PROJECT_ROOT}/LiLY/data'
+LOG: '${PROJECT_ROOT}/log'
 DATASET: 'tdrl' # 
-CHECKPOINT: '/home/minghao.fu/workspace/lily/scripts/tdrl_reproduction/d4d0z7jb/checkpoints/epoch=33-step=83708.ckpt'
+CHECKPOINT: '${PROJECT_ROOT}/scripts/tdrl_reproduction/d4d0z7jb/checkpoints/epoch=33-step=83708.ckpt'
 LOAD_CHECKPOINT: FALSE
 PROJ_NAME: "climate"
 

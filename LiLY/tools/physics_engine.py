@@ -10,8 +10,7 @@ from matplotlib.patches import Rectangle, Circle, Polygon
 
 from LiLY.tools.utils import rand_float, rand_int, calc_dis, norm
 
-import ipdb as pdb
-
+import pdb
 class Engine(object):
 
     def __init__(self, dt, state_dim, action_dim):

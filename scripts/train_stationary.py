@@ -2,7 +2,7 @@ import torch
 import random
 import argparse
 import numpy as np
-import ipdb as pdb
+import pdb
 import os, pwd, yaml
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader, random_split

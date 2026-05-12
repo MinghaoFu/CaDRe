@@ -23,8 +23,7 @@ from Caulimate.Utils.Lego import PartiallyPeriodicMLP
 from Caulimate.Utils.Visualization import plot_sparsity_matrix
 from Caulimate.Utils.Metrics.block import scipy_kl_estimator
 import wandb
-import ipdb as pdb
-
+import pdb
 def normalize(data):
     array = check_array(data)
     # Normalize each feature (column) independently

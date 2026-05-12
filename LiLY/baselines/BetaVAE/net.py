@@ -7,8 +7,7 @@ import torch.nn as nn
 import torch.nn.init as init
 from torch.autograd import Variable
 from leap.modules.components.keypoint import SpatialSoftmax
-import ipdb as pdb
-
+import pdb
 def reparametrize(mu, logvar):
     std = logvar.div(2).exp()
     eps = Variable(std.data.new(std.size()).normal_())

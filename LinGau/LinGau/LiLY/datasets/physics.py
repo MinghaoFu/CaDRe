@@ -20,8 +20,7 @@ from LiLY.tools.utils import rand_int
 from LiLY.tools.utils import init_stat, combine_stat, load_data, store_data
 from LiLY.tools.utils import resize, crop
 import random
-import ipdb as pdb
-
+import pdb
 def pil_loader(path):
     # open path as file to avoid ResourceWarning
     # (https://github.com/python-pillow/Pillow/issues/835)

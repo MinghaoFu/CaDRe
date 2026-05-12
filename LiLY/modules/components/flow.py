@@ -3,8 +3,7 @@ import torch.nn as nn
 import torch.distributions as D
 from torch.nn import functional as F
 from .spline import _monotonic_rational_spline, _construct_nn
-import ipdb as pdb
-
+import pdb
 class ComponentWiseCondSpline(nn.Module):
     def __init__(
         self, 

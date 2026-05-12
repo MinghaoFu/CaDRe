@@ -2,10 +2,10 @@
 # Model Configurations  #
 #########################
 
-ROOT: '/home/minghao.fu/workspace/lily/LiLY/data'
-LOG: '/home/minghao.fu/workspace/lily/log'
+ROOT: '${PROJECT_ROOT}/LiLY/data'
+LOG: '${PROJECT_ROOT}/log'
 DATASET: 'fixed_B_modular_4_9_9'
-CHECKPOINT: '/home/minghao.fu/workspace/lily/scripts/tdrl_reproduction/cx8hlk5m/checkpoints/epoch=74-step=185056.ckpt'
+CHECKPOINT: '${PROJECT_ROOT}/scripts/tdrl_reproduction/cx8hlk5m/checkpoints/epoch=74-step=185056.ckpt'
 LOAD_CHECKPOINT: True
 LOG_NAME: "original_tdrl"
 PROJ_NAME: "tdrl_reproduction"

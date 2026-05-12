@@ -1,15 +1,23 @@
-# Ignore files
+# Logs, data, checkpoints
 **/log/
 **/data/
 **/results/
-./lily.egg_info/
-**/__pycache__/
 **/tdrl_reproduction/
 **/climate/
 **/wandb/
 **/backup/
+**/__pycache__/
+./lily.egg_info/
+*.egg-info/
 scripts/nohup.out
 
+# Large data artifacts (not redistributable)
+/temperature_850
+/dataset/downscaled_pacific_CESM2.txt
+/forecasting/ForeastingBaseline/downscaled_pacific_CESM2.txt
+*.nc
+
+# Generated binaries / media
 *.pth
 *.png
 *.pkl
@@ -19,3 +27,20 @@ scripts/nohup.out
 *.npy
 *.npz
 *.pdf
+
+# IDE / editor
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*~
+
+# Python build
+build/
+dist/
+*.pyc
+
+# Local environments
+.venv/
+venv/
+.env

@@ -1,7 +1,7 @@
 """model.py"""
 
 import torch
-import ipdb as pdb
+import pdb
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.func import jacfwd, vmap
@@ -10,8 +10,7 @@ from torch.autograd import Variable
 import numpy as np
 from .keypoint import SpatialSoftmax
 from .mlp import NLayerLeakyMLP, NLayerLeakyNAC
-import ipdb as pdb
-
+import pdb
 def reparametrize(mu, logvar):
     std = logvar.div(2).exp()
     eps = Variable(std.data.new(std.size()).normal_())

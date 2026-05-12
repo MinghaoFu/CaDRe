@@ -9,7 +9,7 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
-import ipdb
+import pdb
 import pytorch_lightning as fpl
 import wandb
 from pytorch_lightning.loggers import WandbLogger
@@ -25,9 +25,9 @@ from Caulimate.Utils.GraphMetric import count_graph_accuracy
 from Caulimate.Utils.GraphUtils import bin_mat, eudistance_mask
 from Caulimate.Data import WB
 
-SST_DATA_PATH = '/l/users/minghao.fu/dataset/WeatherBench_data_full/temperature_850/*.nc'
-V_PATH = '/l/users/minghao.fu/dataset/WeatherBench_data_full/v_component_of_wind/*.nc'
-U_PATH = '/l/users/minghao.fu/dataset/WeatherBench_data_full/u_component_of_wind/*.nc'
+SST_DATA_PATH = '${DATA_DIR}/WeatherBench_data_full/temperature_850/*.nc'
+V_PATH = '${DATA_DIR}/WeatherBench_data_full/v_component_of_wind/*.nc'
+U_PATH = '${DATA_DIR}/WeatherBench_data_full/u_component_of_wind/*.nc'
 
 args = {
     'dataset': 'synthetic',

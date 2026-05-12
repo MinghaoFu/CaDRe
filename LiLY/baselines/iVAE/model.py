@@ -11,8 +11,7 @@ import pytorch_lightning as pl
 from ..metrics.correlation import compute_mcc
 "iVAE list"
 from .net import iVAEMLP
-import ipdb as pdb
-
+import pdb
 class iVAE(pl.LightningModule):
     def __init__(self, 
                  input_dim, 
