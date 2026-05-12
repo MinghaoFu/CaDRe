@@ -98,6 +98,26 @@ A working notebook for downloading and inspecting WeatherBench is provided in `q
 
 ## Reproducing the paper
 
+Each experiment in the paper has a one-line launcher under [`scripts/repro/`](scripts/repro/README.md). All scripts honour the environment variables described above and accept `EXTRA_ARGS` for passthrough flags.
+
+```bash
+# Everything
+./scripts/repro/run_all.sh
+
+# Individual experiments
+./scripts/repro/run_synthetic.sh         # §5.1, Tables 11-15, Fig. 4
+./scripts/repro/run_neural_baselines.sh  # App. D, Fig. 8
+./scripts/repro/run_causalrivers.sh      # App. D, Fig. 9(b)
+./scripts/repro/run_higher_order.sh      # App. D, Table 16
+./scripts/repro/run_cesm2.sh             # §5.2, Tables 5, 6
+./scripts/repro/run_weatherbench.sh      # §5.2, Tables 5, 6
+./scripts/repro/run_ersst.sh             # §5.2, Table 6
+./scripts/repro/run_forecasting.sh       # §5.2, Tables 5, 18-20
+./scripts/repro/run_visualize.sh         # §5.2, Figs. 5, 10, 11
+```
+
+To invoke the trainers directly:
+
 ### Synthetic identifiability (§5.1, Tables 11–15, Fig. 4)
 
 ```bash
