@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Higher-order Markov latent dynamics (L=2). Reproduces Table 16.
+# Higher-order Markov latent dynamics (App. D, Table 16).
+#
+# Set `LAG: 2` (or 3, 5) in `General/nonparam.yaml` before running.
+# This wrapper sweeps five seeds.
 
 set -euo pipefail
 cd "$(dirname "$0")/../.."
-: "${PROJECT_ROOT:=$PWD}"
+EXP_TAG="${EXP_TAG:-cadre_higher_order_L2}"
 
-for DX in 3 6 8 10; do
-  echo ">>> Higher-order Markov: L=2 d_z=3 d_x=$DX"
-  python General/train_syn.py \
-    --config General/nonparam.yaml \
-    --dx "$DX" --dz 3 --markov-order 2 --seed 1 \
-    ${EXTRA_ARGS:-}
+for SEED in 1 2 3 4 5; do
+  echo ">>> Higher-order: tag=$EXP_TAG seed=$SEED"
+  python General/train_syn.py -e "$EXP_TAG" -s "$SEED" ${EXTRA_ARGS:-}
 done

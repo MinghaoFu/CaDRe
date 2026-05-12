@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
-# External validation on the CausalRivers benchmark (Stein et al., 2025).
-# Reproduces Fig. 9(b) in the appendix.
+# External validation on the CausalRivers benchmark (App. D, Fig. 9(b)).
+#
+# The benchmark driver lives in causalrivers_exp/causalrivers/run_baselines.py
+# (vendored from the upstream CausalRivers repo, see
+# https://github.com/causalriversbenchmark/causalrivers ).
+# Expected data layout: $DATA_DIR/CausalRivers/
 
 set -euo pipefail
 cd "$(dirname "$0")/../.."
-: "${PROJECT_ROOT:=$PWD}"
-: "${DATA_DIR:?Set DATA_DIR to your data root}"
+: "${DATA_DIR:?Set DATA_DIR}"
 
-# The CausalRivers benchmark expects its own data layout under
-# $DATA_DIR/CausalRivers/. The submodule in causalrivers_exp/ contains the
-# benchmark utilities.
-python -m causalrivers_exp.causalrivers.run_baselines \
-  --data-root "$DATA_DIR/CausalRivers" \
-  --methods dynotears cuts rhino jacobian-cd var pcmci cadre \
-  ${EXTRA_ARGS:-}
+if [ -f causalrivers_exp/causalrivers/run_baselines.py ]; then
+  python causalrivers_exp/causalrivers/run_baselines.py ${EXTRA_ARGS:-}
+else
+  echo "[skip] causalrivers_exp/ not present in this checkout."
+  echo "       Clone https://github.com/causalriversbenchmark/causalrivers"
+  echo "       into causalrivers_exp/causalrivers/ to enable."
+fi

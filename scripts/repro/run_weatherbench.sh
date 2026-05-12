@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Train + evaluate on WeatherBench. Reproduces WeatherBench rows of Table 5
-# and the wind-pattern visualizations in §5.2.
+# Train / evaluate on WeatherBench (§5.2, Tables 5 and 6).
+# Note: SSM/test_WB.py runs as a script, not via CLI flags; edit the
+# constants at the top of that file to choose dataset paths and checkpoint.
 
 set -euo pipefail
 cd "$(dirname "$0")/../.."
-: "${PROJECT_ROOT:=$PWD}"
-: "${DATA_DIR:?Set DATA_DIR to your data root (must contain WeatherBench/)}"
+: "${DATA_DIR:?Set DATA_DIR (must contain WeatherBench/)}"
 
-python SSM/test_WB.py ${EXTRA_ARGS:-}
+python SSM/test_WB.py
