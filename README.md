@@ -4,8 +4,11 @@ Reference implementation of **CaDRe** (**Ca**usal **D**iscovery and **Re**presen
 
 CaDRe jointly recovers the latent dynamic process and the observed causal graph from a multivariate time series, with nonparametric identifiability guarantees.
 
-- **Paper:** [OpenReview](https://openreview.net/forum?id=MZxhwFT7yF)
-- **Authors:** Minghao Fu, Biwei Huang, Zijian Li, Yujia Zheng, Ignavier Ng, Guangyi Chen, Yingyao Hu, Kun Zhang
+- **Paper:** [OpenReview](https://openreview.net/forum?id=MZxhwFT7yF) · [arXiv](https://arxiv.org/abs/2501.12500)
+- **Authors:** Minghao Fu, Biwei Huang, Zijian Li, Yujia Zheng, Ignavier Ng, Guangyi Chen,
+  Yingyao Hu&dagger;, Kun Zhang&dagger;
+
+<sub>&dagger; Equal advising. Affiliations: MBZUAI, CMU, UC San Diego, Johns Hopkins University.</sub>
 
 ## Install
 
