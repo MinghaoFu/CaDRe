@@ -187,15 +187,15 @@ def offset_path(start, end, offset):
     mid_lat = (start_lat + end_lat) / 2 + offset
     return [(start_lon, start_lat), (mid_lon, mid_lat), (end_lon, end_lat)]
 
-# 根据邻接矩阵绘制因果连接
-offset = 0.5  # 偏移量
+# Draw causal edges from the adjacency matrix
+offset = 0.5  # offset
 
 for i in range(len(B_init)):
     for j in range(len(B_init)):
         if B_init[i, j] != 0:
             point1 = coords[i]
             point2 = coords[j]
-            # 处理跨越日期变更线的情况
+            # Handle the case where edges cross the date line
             # if abs(point1[1] - point2[1]) > 180:
             #     if point1[1] > point2[1]:
             #         point2 = (point2[0], point2[1] + 360)
